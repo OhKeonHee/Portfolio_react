@@ -97,8 +97,7 @@ const Home = () => {
         <div className='terminal-info'>
           <h3 className='left-bracket'></h3>
           <h3 style={{fontStyle: 'normal', transform: 'translateY(-3px)'}}>/ *</h3>
-          <h3>터미널에 '<span>npm start</span>'를 입력해주세요.</h3>
-          <img src="img/figma.png" width={15} />
+          <h3>터미널에 '<span>npm start</span>'를 입력하시면 해당 포트폴리오 설명창이 뜹니다.</h3>
           <h3 style={{fontStyle: 'normal', transform: 'translateY(-3px)'}}>* /</h3>
           <h3 className='right-bracket'></h3>
         </div>
