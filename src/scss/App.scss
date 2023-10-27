@@ -373,103 +373,115 @@
   .modal {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 500px;
+    margin-top: 10px;
+    transform: translateX(-50%);
+    width: 80%;
     background-color: white;
-    .modal-nav {
-      padding-left: 10px;
-      display: flex;
-      justify-content: space-between;
-      padding-top: 5px;
-      background-color: skyblue;
-      .modal-window {
+    font-family: 'Noto Sans KR', sans-serif;
+    .modal_top {
+      .modal-nav {
+        padding-left: 10px;
         display: flex;
-        padding: 5px;
-        border-bottom: none;
-        border-radius: 10px 10px 0 0;
-        background-color: white;
-        svg {
-          width: 25px;
-          height: 25px;
-          margin-right: 5px;
-        }
-        span {
-          position: relative;
+        justify-content: space-between;
+        padding-top: 5px;
+        background-color: skyblue;
+        .modal-window {
           display: flex;
-          width: 20px;
-          margin-left: 40px;
-          > * {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%) scale(.6);
+          padding: 5px;
+          border-bottom: none;
+          border-radius: 10px 10px 0 0;
+          background-color: white;
+          svg {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
           }
-          &:hover {
-            background-color: rgb(189, 189, 189);
-            border-radius: 50%;
+          span {
+            position: relative;
+            display: flex;
+            width: 20px;
+            margin-left: 40px;
+            > * {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%) scale(.6);
+            }
+            &:hover {
+              background-color: rgb(189, 189, 189);
+              border-radius: 50%;
+            }
+          }
+        }
+        .modal-btns {
+          display: flex;
+          justify-content: center;
+          > span {
+            padding: 10px;
+            padding-top: 5px;
+            &:hover {
+              background-color: rgb(114, 166, 187);
+            }
+            &:last-child:hover {
+              background-color: red;
+              color: white;
+            }
           }
         }
       }
-      .modal-btns {
+      .modal-address {
+        width: 100%;
         display: flex;
-        justify-content: center;
+        align-items: center;
+        padding: 10px 5px;
+        border-bottom: 1px solid lightgray;
+        font-size: 18px;
         > span {
-          padding: 10px;
-          padding-top: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
           &:hover {
             background-color: rgb(114, 166, 187);
+            border-radius: 50%;
           }
-          &:last-child:hover {
-            background-color: red;
-            color: white;
+        }
+        .address {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: lightgray;
+          flex: 1;
+          border-radius: 30px;
+          padding: 5px 10px;
+          margin: 0 10px;
+          .left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            #icon {
+              transform: translateY(2px);
+            }
+          }
+          .right {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin: 0 10px;
+            > span > * {
+              transform: translateY(2px);
+            }
           }
         }
       }
     }
-    .modal-address {
+    .modal-view {
+      overflow-y: scroll;
       width: 100%;
-      display: flex;
-      align-items: center;
-      padding: 10px 5px;
-      border-bottom: 1px solid lightgray;
-      font-size: 18px;
-      > span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px;
-        &:hover {
-          background-color: rgb(114, 166, 187);
-          border-radius: 50%;
-        }
-      }
-      .address {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: lightgray;
-        flex: 1;
-        border-radius: 30px;
-        padding: 5px 10px;
-        margin: 0 10px;
-        .left {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          #icon {
-            transform: translateY(2px);
-          }
-        }
-        .right {
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          margin: 0 10px;
-          > span > * {
-            transform: translateY(2px);
-          }
-        }
+      height: 1000px;
+      padding: 0;
+      background-color: transparent;
+      .inModal_nav {
+        margin-top: 10px;
       }
     }
   }

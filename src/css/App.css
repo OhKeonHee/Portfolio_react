@@ -412,62 +412,62 @@ li {
 .Home .modal {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 500px;
+  margin-top: 10px;
+  transform: translateX(-50%);
+  width: 80%;
   background-color: white;
+  font-family: "Noto Sans KR", sans-serif;
 }
-.Home .modal .modal-nav {
+.Home .modal .modal_top .modal-nav {
   padding-left: 10px;
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
   background-color: skyblue;
 }
-.Home .modal .modal-nav .modal-window {
+.Home .modal .modal_top .modal-nav .modal-window {
   display: flex;
   padding: 5px;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
   background-color: white;
 }
-.Home .modal .modal-nav .modal-window svg {
+.Home .modal .modal_top .modal-nav .modal-window svg {
   width: 25px;
   height: 25px;
   margin-right: 5px;
 }
-.Home .modal .modal-nav .modal-window span {
+.Home .modal .modal_top .modal-nav .modal-window span {
   position: relative;
   display: flex;
   width: 20px;
   margin-left: 40px;
 }
-.Home .modal .modal-nav .modal-window span > * {
+.Home .modal .modal_top .modal-nav .modal-window span > * {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) scale(0.6);
 }
-.Home .modal .modal-nav .modal-window span:hover {
+.Home .modal .modal_top .modal-nav .modal-window span:hover {
   background-color: rgb(189, 189, 189);
   border-radius: 50%;
 }
-.Home .modal .modal-nav .modal-btns {
+.Home .modal .modal_top .modal-nav .modal-btns {
   display: flex;
   justify-content: center;
 }
-.Home .modal .modal-nav .modal-btns > span {
+.Home .modal .modal_top .modal-nav .modal-btns > span {
   padding: 10px;
   padding-top: 5px;
 }
-.Home .modal .modal-nav .modal-btns > span:hover {
+.Home .modal .modal_top .modal-nav .modal-btns > span:hover {
   background-color: rgb(114, 166, 187);
 }
-.Home .modal .modal-nav .modal-btns > span:last-child:hover {
+.Home .modal .modal_top .modal-nav .modal-btns > span:last-child:hover {
   background-color: red;
   color: white;
 }
-.Home .modal .modal-address {
+.Home .modal .modal_top .modal-address {
   width: 100%;
   display: flex;
   align-items: center;
@@ -475,17 +475,17 @@ li {
   border-bottom: 1px solid lightgray;
   font-size: 18px;
 }
-.Home .modal .modal-address > span {
+.Home .modal .modal_top .modal-address > span {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
 }
-.Home .modal .modal-address > span:hover {
+.Home .modal .modal_top .modal-address > span:hover {
   background-color: rgb(114, 166, 187);
   border-radius: 50%;
 }
-.Home .modal .modal-address .address {
+.Home .modal .modal_top .modal-address .address {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -495,22 +495,32 @@ li {
   padding: 5px 10px;
   margin: 0 10px;
 }
-.Home .modal .modal-address .address .left {
+.Home .modal .modal_top .modal-address .address .left {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.Home .modal .modal-address .address .left #icon {
+.Home .modal .modal_top .modal-address .address .left #icon {
   transform: translateY(2px);
 }
-.Home .modal .modal-address .address .right {
+.Home .modal .modal_top .modal-address .address .right {
   display: flex;
   gap: 10px;
   align-items: center;
   margin: 0 10px;
 }
-.Home .modal .modal-address .address .right > span > * {
+.Home .modal .modal_top .modal-address .address .right > span > * {
   transform: translateY(2px);
+}
+.Home .modal .modal-view {
+  overflow-y: scroll;
+  width: 100%;
+  height: 1000px;
+  padding: 0;
+  background-color: transparent;
+}
+.Home .modal .modal-view .inModal_nav {
+  margin-top: 10px;
 }
 
 .Projects {
