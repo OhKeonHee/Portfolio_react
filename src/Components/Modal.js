@@ -90,8 +90,8 @@ const IntroBtn = styled.button`
 
 export const Modal = ({modalView, setModalView}) => {
   return (
-    <div className='modal'>
-    {/* <div className='modal' style={{display: `${modalView}`}}> */}
+    // <div className='modal'>
+    <div className='modal' style={{display: `${modalView}`}}>
       <div className='modal_top'>
         <div className='modal-nav'>
           <div className='modal-window'>
