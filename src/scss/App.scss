@@ -191,6 +191,7 @@
 // ===== Home
 .Home {
   width: calc(100vw - 300px);
+  height: 100%;
   position: relative;
   padding-top: 50px;
   display: flex;
@@ -373,11 +374,13 @@
   .modal {
     position: absolute;
     left: 50%;
-    margin-top: 10px;
+    margin-top: 0px;
     transform: translateX(-50%);
-    width: 80%;
+    width: 70%;
+    height: auto;
     background-color: white;
     font-family: 'Noto Sans KR', sans-serif;
+    z-index: 999;
     .modal_top {
       .modal-nav {
         padding-left: 10px;
@@ -387,7 +390,8 @@
         background-color: skyblue;
         .modal-window {
           display: flex;
-          padding: 5px;
+          align-items: center;
+          padding: 5px 10px;
           border-bottom: none;
           border-radius: 10px 10px 0 0;
           background-color: white;
@@ -397,15 +401,12 @@
             margin-right: 5px;
           }
           span {
-            position: relative;
             display: flex;
             width: 20px;
-            margin-left: 40px;
-            > * {
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%) scale(.6);
-            }
+            height: 20px;
+            margin-left: 20px;
+            align-items: center;
+            transform: translateY(2px);
             &:hover {
               background-color: rgb(189, 189, 189);
               border-radius: 50%;

@@ -33,6 +33,7 @@ const Home = () => {
   return (
     <div>
       <div className='Home'>
+      <Modal modalView={modalView} setModalView={setModalView} />
         <div className='code'>
           <div className='code-side'>
             <h1>1</h1>
@@ -98,7 +99,7 @@ const Home = () => {
         <div className='terminal-info'>
           <h3 className='left-bracket'></h3>
           <h3 style={{fontStyle: 'normal', transform: 'translateY(-3px)'}}>/ *</h3>
-          <h3>터미널에 '<span>npm start</span>'를 입력하시면 해당 포트폴리오 설명창이 뜹니다.</h3>
+          <h3>터미널에 '<span>npm start</span>'를 입력하시면 해당 저의 이력서를 보실 수 있습니다!</h3>
           <h3 style={{fontStyle: 'normal', transform: 'translateY(-3px)'}}>* /</h3>
           <h3 className='right-bracket'></h3>
         </div>
@@ -143,7 +144,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Modal modalView={modalView} setModalView={setModalView} />
       </div>
     </div>
     

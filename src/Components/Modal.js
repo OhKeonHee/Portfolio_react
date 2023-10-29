@@ -4,6 +4,15 @@ import { FcGoogle } from "react-icons/fc";
 import { TfiShare, TfiStar, TfiLayoutGrid3Alt } from "react-icons/tfi";
 import Profile_img from '../imgs/Profile.jpg'
 import styled from 'styled-components';
+import resume1 from '../imgs/ogh_resume1.png';
+import resume2 from '../imgs/ogh_resume2.png';
+import resume3 from '../imgs/ogh_resume3.png';
+import resume4 from '../imgs/ogh_resume4.png';
+import resume5 from '../imgs/ogh_resume5.png';
+import resume6 from '../imgs/ogh_resume6.png';
+import resume7 from '../imgs/ogh_resume7.png';
+import resume8 from '../imgs/ogh_resume8.png';
+import blog from '../imgs/blogIcon.JPG';
 
 const Ul = styled.ul`
   position: fixed;
@@ -45,19 +54,24 @@ const Article = styled.article`
   padding: 0 20px;
   gap: 10px;
   margin-top: -70px;
+  margin-bottom: 10px;
+  height: auto;
 `
 const Profile = styled.div`
   background-color: white;
   border: 1px solid black;
-  width: 200px;
+  width: 20%;
   padding: 10px;
-  height: 500px;
+  height: 100%;
+  padding-bottom: 40px;
+  border-radius: 10px;
 `
 const Main = styled.div`
   background-color: white;
   border: 1px solid black;
-  flex: 3;
-  height: 100vh;
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
 `
 const A = styled.a`
   text-decoration: underline;
@@ -95,11 +109,9 @@ export const Modal = ({modalView, setModalView}) => {
       <div className='modal_top'>
         <div className='modal-nav'>
           <div className='modal-window'>
-            <svg fill='#00bcd4'>
-            <path d='m12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85s-1.87-.85-1.87-1.85c0-1.05.84-1.89 1.87-1.89m-4.63 9.89c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9-.82-.08-1.63-.2-2.4-.36-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47-.54-.03-1.11-.03-1.71-.03s-1.17 0-1.71.03c-.29.47-.61.94-.91 1.47l-.81 1.5.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03s1.17 0 1.71-.03c.29-.47.61-.94.91-1.47m-2.62-6.72c-.19.22-.39.45-.59.72h.59.59c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-.59-.59c.2.27.4.5.59.72m4.62-13.22c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68s-1.83 2.93-4.37 3.68c.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68s1.83-2.93 4.37-3.68c-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95m-.29 9.31c.34.75.64 1.5.89 2.26 2.1-.63 3.28-1.53 3.28-2.26s-1.18-1.63-3.28-2.26c-.25.76-.55 1.51-.89 2.26m-10.16 0c-.34-.75-.64-1.5-.89-2.26-2.1.63-3.28 1.53-3.28 2.26s1.18 1.63 3.28 2.26c.25-.76.55-1.51.89-2.26m9 2.26l-.3.51c.31-.05.61-.1.88-.16-.07-.28-.18-.57-.29-.86l-.29.51m-2.89 4.04c1.59 1.5 2.97 2.08 3.59 1.7.64-.35.83-1.82.32-3.96-.77.16-1.58.28-2.4.36-.48.67-.99 1.31-1.51 1.9m-4.95-8.56l.3-.51c-.31.05-.61.1-.88.16.07.28.18.57.29.86l.29-.51m2.89-4.04c-1.59-1.5-2.97-2.08-3.6-1.7-.63.35-.82 1.82-.31 3.96.77-.16 1.58-.28 2.4-.36.48-.67.99-1.31 1.51-1.9z' />
-            </svg>
-            <div>React App</div>
-            <span onClick={() => {setModalView('none')}}><VscChromeClose /></span>
+            <img src={blog} width={25} height={25} style={{transform: 'translateY(3px)', marginRight: '8px'}} />
+            <div>오건희의 이력서 : 네이버블로그</div>
+            <span onClick={() => {setModalView('none')}}><VscChromeClose style={{transform: 'translateX(2px)'}} /></span>
           </div>
           <div className='modal-btns'>
             <span><VscChromeMinimize /></span>
@@ -114,7 +126,8 @@ export const Modal = ({modalView, setModalView}) => {
           <div className='address'>
             <div className='left'>
               <span id='icon'><VscInfo /></span>
-              <span>localhost:3000</span>
+              <span>blog.naver.com</span>
+              <span style={{color: 'gray'}}>오건희의 이력서 : 네이버블로그</span>
             </div>
             <div className='right'>
               <span><FcGoogle /></span>
@@ -136,8 +149,8 @@ export const Modal = ({modalView, setModalView}) => {
           </Ul>
         </div>
         <Title>
-          <h1>포트폴리오 설명</h1>
-          <p>OH KEON HEE's Portfolio</p>
+          <h1>이력서</h1>
+          <p>OH KEON HEE's Resume</p>
         </Title>
         <Article>
           <Profile>
@@ -152,8 +165,14 @@ export const Modal = ({modalView, setModalView}) => {
             </Introduce>
           </Profile>
           <Main>
-            <h1>포트폴리오 설명</h1>
-            <p>OH KEON HEE's Portfolio</p>
+            <img src={resume1} alt="" width={`100%`}/>
+            <img src={resume2} alt="" width={`100%`} style={{marginTop: '-60px'}}/>
+            <img src={resume3} alt="" width={`100%`} style={{marginTop: '-50px'}}/>
+            <img src={resume4} alt="" width={`100%`} style={{marginTop: '-162px'}}/>
+            <img src={resume5} alt="" width={`100%`} style={{marginTop: '-160px'}}/>
+            <img src={resume6} alt="" width={`100%`} style={{marginTop: '-134px'}}/>
+            <img src={resume7} alt="" width={`100%`} style={{marginTop: '-170px'}}/>
+            <img src={resume8} alt="" width={`100%`} style={{marginTop: '-50px', marginBottom: '-70px'}}/>
           </Main>
         </Article>
       </div>

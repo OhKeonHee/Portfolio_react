@@ -248,6 +248,7 @@ li {
 
 .Home {
   width: calc(100vw - 300px);
+  height: 100%;
   position: relative;
   padding-top: 50px;
   display: flex;
@@ -412,11 +413,13 @@ li {
 .Home .modal {
   position: absolute;
   left: 50%;
-  margin-top: 10px;
+  margin-top: 0px;
   transform: translateX(-50%);
-  width: 80%;
+  width: 70%;
+  height: auto;
   background-color: white;
   font-family: "Noto Sans KR", sans-serif;
+  z-index: 999;
 }
 .Home .modal .modal_top .modal-nav {
   padding-left: 10px;
@@ -427,7 +430,8 @@ li {
 }
 .Home .modal .modal_top .modal-nav .modal-window {
   display: flex;
-  padding: 5px;
+  align-items: center;
+  padding: 5px 10px;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
   background-color: white;
@@ -438,15 +442,12 @@ li {
   margin-right: 5px;
 }
 .Home .modal .modal_top .modal-nav .modal-window span {
-  position: relative;
   display: flex;
   width: 20px;
-  margin-left: 40px;
-}
-.Home .modal .modal_top .modal-nav .modal-window span > * {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) scale(0.6);
+  height: 20px;
+  margin-left: 20px;
+  align-items: center;
+  transform: translateY(2px);
 }
 .Home .modal .modal_top .modal-nav .modal-window span:hover {
   background-color: rgb(189, 189, 189);
