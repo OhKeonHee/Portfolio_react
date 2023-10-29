@@ -284,6 +284,9 @@
     > h3 > span {
       color: orange;
     }
+    & :nth-child(3) {
+      width: 590px;
+    }
     .left-bracket::before {
       content: '{';
       font-style: normal;

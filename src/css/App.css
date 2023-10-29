@@ -326,6 +326,9 @@ li {
 .Home .terminal-info > h3 > span {
   color: orange;
 }
+.Home .terminal-info :nth-child(3) {
+  width: 590px;
+}
 .Home .terminal-info .left-bracket::before {
   content: "{";
   font-style: normal;
