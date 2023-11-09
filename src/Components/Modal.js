@@ -102,6 +102,110 @@ const IntroBtn = styled.button`
   }
 `
 
+const About = styled.div`
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`
+const About_H = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid gray;
+`
+const Left = styled.div`
+  flex: 2;
+  text-align: center;
+  > h1 {
+    color: skyblue;
+    font-size: 48px;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+  }
+  > h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    > a {
+      color: deepskyblue;
+      text-decoration: underline;
+    }
+  }
+`
+const Right = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  > div {
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+`
+const About_Me = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  > h3 {
+    margin: 10px 0;
+  }
+  > ul > li {
+    margin: 10px;
+  }
+`
+const About_Skill = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  > h3 {
+    border-bottom: 3px solid gray;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  > h5 {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+`
+const About_Grade = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  > h3 {
+    border-bottom: 3px solid gray;
+    padding: 10px;
+    margin: 20px 0;
+  }
+  > span {
+    margin: 10px 0;
+    padding-left: 30px;
+    > label {
+      margin-right: 20px;
+    }
+  }
+`
+const Table = styled.table`
+  width: 100%;
+  > tr {
+    text-align: center;
+    > th {
+      background-color: skyblue;
+    }
+    > td {
+      border-bottom: 1px solid gray;
+      padding: 5px;
+    }
+  }
+`
+
 export const Modal = ({modalView, setModalView}) => {
   return (
     // <div className='modal'>
@@ -165,14 +269,101 @@ export const Modal = ({modalView, setModalView}) => {
             </Introduce>
           </Profile>
           <Main>
-            <img src={resume1} alt="" width={`100%`}/>
-            <img src={resume2} alt="" width={`100%`} style={{marginTop: '-60px'}}/>
-            <img src={resume3} alt="" width={`100%`} style={{marginTop: '-50px'}}/>
-            <img src={resume4} alt="" width={`100%`} style={{marginTop: '-162px'}}/>
-            <img src={resume5} alt="" width={`100%`} style={{marginTop: '-160px'}}/>
-            <img src={resume6} alt="" width={`100%`} style={{marginTop: '-134px'}}/>
-            <img src={resume7} alt="" width={`100%`} style={{marginTop: '-170px'}}/>
-            <img src={resume8} alt="" width={`100%`} style={{marginTop: '-50px', marginBottom: '-70px'}}/>
+            <About>
+              <About_H>
+                <Left>
+                  <h1>오건희</h1>
+                  <h3>( Frontend Developer )</h3>
+                  <h4>GitHub : <a href='https://github.com/OhKeonHee' target='_blank'>https://github.com/OhKeonHee</a></h4>
+                  <h4>Portfolio : <a href='https://ogh-react-portfolio.netlify.app/' target='_blank'>https://ogh-react-portfolio.netlify.app/</a></h4>
+                </Left>
+                <Right>
+                  <div>
+                    <label>Birthday</label>
+                    <span>1998.12.22</span>
+                  </div>
+                  <div>
+                    <label>Email</label>
+                    <span><a href='mailto:98ogh@naver.com'>98ogh@naver.com</a></span>
+                  </div>
+                  <div>
+                    <label>Mobile</label>
+                    <span>010-8980-2726</span>
+                  </div>
+                  <div>
+                    <label>Address</label>
+                    <span>고양시 일산동구 풍동</span>
+                  </div>
+                  <div>
+                    <label>병역사항</label>
+                    <span>육군 병장 전역</span>
+                  </div>
+                </Right>
+              </About_H>
+              <About_Me>
+                <h3>소개 / About Me!</h3>
+                <ul>
+                  <li>
+                    <span>▶ </span>기본스킬 HTML, CSS (SCSS), JS를 모자람없이 다뤄 개발할 수 있는 신입 개발자입니다. 
+                  </li>
+                  <li>
+                    <span>▶ </span>팀 프로젝트이외에 다양한 개인 프로젝트와 예제를 통해 이론과 코딩감각을 쌓아가는 개발자입니다.
+                  </li>
+                  <li>
+                    <span>▶ </span>호기심과 도전 의식, 몰입력이 강해 최근 Node.js, TypeScript를 이용한 React로 프로젝트와 예제들을 개발하며,
+                    예전 프로젝트들을 TypeScript로 바꾸는 연습을 통해 코딩의 다양성을 넓히는 개발자입니다.
+                  </li>
+                  <li>
+                    <span>▶ </span>대학 전공으론 jsp, Unity, Android Studio, C++, Java, Python, 데이터베이스, 알고리즘, 아두이노 등을 공부했으며,
+                    졸업작품 팀 프로젝트로 대학 챗봇을 개발해 프론트엔드와 회원정보, 로그인, 회원가입의 백엔드, 데이터베이스를 개발했습니다.
+                  </li>
+                  <li></li>
+                </ul>
+              </About_Me>
+              <About_Skill>
+                <h3>기술 스택 / Skill Set</h3>
+                <h5>기능 구현 등의 사용 경험이 있는 Skill Set</h5>
+                <Table>
+                  <tr>
+                    <th>구분</th>
+                    <th>Skill</th>
+                  </tr>
+                  <tr>
+                    <td>Programing Languages</td>
+                    <td>JavaScript(ES6), HTML5, CSS3, SCSS, TypeScript, Python, Java, C++</td>
+                  </tr>
+                  <tr>
+                    <td>Framework / Library</td>
+                    <td>React, JQuery, eclipse, Unity, Android Studio</td>
+                  </tr>
+                  <tr>
+                    <td>Server</td>
+                    <td>MySQL, MariaDB, Apache Tomcat</td>
+                  </tr>
+                  <tr>
+                    <td>Tooling/ DevOps</td>
+                    <td>GitHub</td>
+                  </tr>
+                  <tr>
+                    <td>Environment</td>
+                    <td>Linux</td>
+                  </tr>
+                  <tr>
+                    <td>ETC</td>
+                    <td>Firebase</td>
+                  </tr>
+                </Table>
+              </About_Skill>
+              <About_Grade>
+                <h3>학력</h3>
+                <span><label>-</label><label>18.03 ~ 23.02</label> 서일대학교 소프트웨어공학과 졸업</span>
+                <span><label>-</label><label>14.03 ~ 17.02</label> 일산 세원고등학교 졸업</span>
+              </About_Grade>
+              <About_Grade>
+                <h3>교육 내용</h3>
+                <span><label>-</label><label>23.02 ~ 23.08</label> 종로그린컴퓨터학원 - 웹퍼블리셔&리엑트활용 프론트엔드 웹 SW개발자 과정</span>
+              </About_Grade>
+            </About>
           </Main>
         </Article>
       </div>
