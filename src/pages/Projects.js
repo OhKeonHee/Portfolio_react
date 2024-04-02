@@ -19,6 +19,7 @@ import adererror from '../imgs/react_adererror.PNG'
 import netflix from '../imgs/react_netflix.PNG'
 import teamproject from '../imgs/teamproject.PNG'
 import react_portfolio from '../imgs/react_portfolio.PNG'
+import sollink from '../imgs/sollink.JPG'
 import { VscGithubInverted, VscGlobe } from 'react-icons/vsc'
 
 const Wrapper = styled.div`
@@ -129,6 +130,16 @@ const Project_read = styled.h3`
   white-space: pre-line;
 `
 const project_arr = [
+  {
+    id: 14,
+    projectName: '솔링크',
+    date: '24/03/18 ~ 24/03/22',
+    ReactIcon: ReactIcon,
+    domain: 'https://sollink.ai/',
+    github: '',
+    thumbnail: sollink,
+    read: ``
+  },
   {
     id: 13,
     projectName: '리액트로 만든 포트폴리오',
