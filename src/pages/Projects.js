@@ -6,6 +6,7 @@ import ReactIcon from '../icons/ReactIcon'
 import HtmlIcon from '../icons/HtmlIcon'
 import CssIcon from '../icons/CssIcon'
 import JsIcon from '../icons/JsIcon'
+import TsIcon from '../icons/TypeScript'
 import mealkit_mobile from '../imgs/mealkit_mobile.PNG'
 import academy_uiux_page from '../imgs/academy_uiux_page.PNG'
 import music_play from '../imgs/music_play.PNG'
@@ -137,6 +138,7 @@ const project_arr = [
     HtmlIcon: 'x',
     CssIcon: 'x',
     JsIcon: 'x',
+    TsIcon: TsIcon,
     ReactIcon: ReactIcon,
     domain: 'https://sollink.ai/',
     github: '',
@@ -388,6 +390,7 @@ const Projects = () => {
                 <it.HtmlIcon />
                 <it.CssIcon />
                 <it.JsIcon />
+                <it.TsIcon />
                 <it.ReactIcon />
               </Icons>
               {it.date}
