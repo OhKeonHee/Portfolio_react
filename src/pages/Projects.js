@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { styled } from 'styled-components'
 import { motion } from 'framer-motion'
+import TsIcon from '../icons/TsIcon'
 import ReactIcon from '../icons/ReactIcon'
 import HtmlIcon from '../icons/HtmlIcon'
 import CssIcon from '../icons/CssIcon'
@@ -94,6 +95,10 @@ const Overlay = styled(motion.div)`
     padding: 0 10px;
     overflow-y: scroll;
     padding: 5px;
+    a {
+      color: #4D78ff;
+      font-size: 14px;
+    }
   }
   > div {
     display: flex;
@@ -139,10 +144,11 @@ const project_arr = [
     CssIcon: 'x',
     JsIcon: 'x',
     ReactIcon: ReactIcon,
+    TsIcon: TsIcon,
     domain: 'https://sto-renewal.netlify.app/',
     github: 'https://github.com/OhKeonHee/STO',
     thumbnail: sto,
-    read: `STO 페이지를 제가 바꿔봤습니다.\n기존 페이지: ${<a href='https://www.thesto.kr/' target='blank'>https://www.thesto.kr/</a>}`
+    read: <p dangerouslySetInnerHTML={{ __html: `STO 페이지를 제가 바꿔봤습니다.\n 기존 페이지: <a href='https://www.thesto.kr/' target='_blank'>https://www.thesto.kr/</a>` }} />
   },
   {
     id: 4,
@@ -152,10 +158,11 @@ const project_arr = [
     CssIcon: 'x',
     JsIcon: 'x',
     ReactIcon: ReactIcon,
+    TsIcon: TsIcon,
     domain: 'https://sollink.ai/',
     github: '',
     thumbnail: sollink,
-    read: ``
+    read: `외주제작으로 빅웨이브로보틱스사에서 의뢰받은 페이지 리뉴얼입니다.`
   },
   {
     id: 3,
@@ -385,8 +392,8 @@ const Projects = () => {
           <Project key={it.id}>
             <Project_num>{it.id}</Project_num>
               <Overlay whileHover={{ opacity: 1 }}>
-                <h4>{it.read}</h4>
-                <div>
+                <h4 style={{paddingBottom: 40}}>{it.read}</h4>
+                <div style={{position: 'absolute', zIndex: 99, bottom: 0}}>
                   <a href={it.domain} target='_blank'>
                     <VscGlobe style={{transform: 'translateY(2px)'}} /> 프로젝트 보기
                   </a>
@@ -403,6 +410,7 @@ const Projects = () => {
                 <it.CssIcon />
                 <it.JsIcon />
                 <it.ReactIcon />
+                {it?.TsIcon == TsIcon && <it.TsIcon />}
               </Icons>
               {it.date}
             </SkillSec>
