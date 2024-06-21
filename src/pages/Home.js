@@ -43,6 +43,7 @@ const Home = () => {
             <h1>5</h1>
             <h1>6</h1>
             <h1>7</h1>
+            <h1>8</h1>
           </div>
           <div className='main'>
             <div className='title'>
@@ -51,11 +52,16 @@ const Home = () => {
                 <span style={{color: '#9CBF78'}}>'./css/App.css'</span>
                 <span style={{color: 'var(--font-color)'}}>;</span>
               </h1>
-              <h1 className='code-import' style={{marginBottom: '80px'}}>
+              <h1 className='code-import' style={{marginBottom: '25px'}}>
                 <span style={{color: '#BB77D9'}}>import </span>
                 <span style={{color: '#E06C75', marginRight: '5px'}}>React</span>
                 <span style={{color: '#BB77D9'}}>from</span>
                 <span style={{color: '#9CBF78'}}>'react'</span>
+              </h1>
+              <h1 className='code-import' style={{marginBottom: '75px', fontSize: 32}}>
+                <span style={{color: '#FFA500'}}>{`{`} </span>
+                <span style={{color: 'gray'}}>/* 설정아이콘에서 테마변경이 가능합니다! */ </span>
+                <span style={{color: '#FFA500'}}>{`}`} </span>
               </h1>
               <h1 className='code-first'>
                 <span className='left-chevron'></span>
